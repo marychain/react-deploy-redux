@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-deploy-redux/static/css/main.61aaaedb.chunk.css",
+    "main.js": "/react-deploy-redux/static/js/main.ae6f2c51.chunk.js",
+    "main.js.map": "/react-deploy-redux/static/js/main.ae6f2c51.chunk.js.map",
+    "runtime-main.js": "/react-deploy-redux/static/js/runtime-main.0bcde2c2.js",
+    "runtime-main.js.map": "/react-deploy-redux/static/js/runtime-main.0bcde2c2.js.map",
+    "static/js/2.6e04916d.chunk.js": "/react-deploy-redux/static/js/2.6e04916d.chunk.js",
+    "static/js/2.6e04916d.chunk.js.map": "/react-deploy-redux/static/js/2.6e04916d.chunk.js.map",
+    "static/js/3.5b2c381c.chunk.js": "/react-deploy-redux/static/js/3.5b2c381c.chunk.js",
+    "static/js/3.5b2c381c.chunk.js.map": "/react-deploy-redux/static/js/3.5b2c381c.chunk.js.map",
+    "index.html": "/react-deploy-redux/index.html",
+    "static/css/main.61aaaedb.chunk.css.map": "/react-deploy-redux/static/css/main.61aaaedb.chunk.css.map",
+    "static/js/2.6e04916d.chunk.js.LICENSE.txt": "/react-deploy-redux/static/js/2.6e04916d.chunk.js.LICENSE.txt",
+    "static/media/dr_house.24fbdd32.jpg": "/react-deploy-redux/static/media/dr_house.24fbdd32.jpg",
+    "static/media/drhouse.19ccc6d6.jpg": "/react-deploy-redux/static/media/drhouse.19ccc6d6.jpg",
+    "static/media/everybody.30c7ea26.jpg": "/react-deploy-redux/static/media/everybody.30c7ea26.jpg",
+    "static/media/likes.9b4eef74.png": "/react-deploy-redux/static/media/likes.9b4eef74.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0bcde2c2.js",
+    "static/js/2.6e04916d.chunk.js",
+    "static/css/main.61aaaedb.chunk.css",
+    "static/js/main.ae6f2c51.chunk.js"
+  ]
+}
