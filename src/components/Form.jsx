@@ -15,7 +15,7 @@ let Form = props => {
         id: 234236,
         author: '',
         photoAuthor: photoDrHouse,
-        nickname: 'nick_name',
+        nickname: 'best_doctor',
         text: '',
         contentPhoto: '',
         time: '23 april',
@@ -43,22 +43,25 @@ let Form = props => {
                 ...postData,
                 author: e.target.value,
                 photoAuthor: photoJWilson,
+                nickname: 'best_friend'
             })   
         } else if(e.target.value === 'Lisa Cuddy') {
             setPostData({
                 ...postData,
                 author: e.target.value,
-                photoAuthor: photoLCuddy
+                photoAuthor: photoLCuddy,
+                nickname: 'lisa_cuddy'
             })
         } else if (e.target.value === 'Doctor House'){
             setPostData({
                 ...postData,
                 author: e.target.value,
-                photoAuthor: photoDrHouse
+                photoAuthor: photoDrHouse,
+                nickname: 'best_doctor'
             })
         }
     }
-    
+
     return (
         <div>
             <form className='form' onSubmit={handleSubmit}>
