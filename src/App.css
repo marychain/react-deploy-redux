@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./components/assets/fonts/Roboto-Regular.ttf);
+}
+
 .App {
   background-color: rgb(59, 69, 83);
   color: aliceblue;
@@ -9,5 +14,6 @@
   align-items: center;
   align-content: center; 
   justify-content: center;
+  font-family: Roboto;
 }
 

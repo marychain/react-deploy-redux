@@ -1,104 +1,107 @@
-    .post {
+.post {
     display: flex;
     margin: 10px;
     justify-content: center;
-    }
+}
 
-    .photo_author {
-    width: 50px;
+.photo {
     overflow: hidden;
-    border-radius: 50%;
-    }
+}
 
-    .photo_author:hover {
+.photo__author{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.photo:hover {
     opacity: 0.6;
-    }
+}
 
-    .author_post {
+.author__post {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    }
+}
 
-    .author{
+.author{
     display: flex;
     flex-direction: row;
     height: 30px;
-
     align-items: center;
-    }
+}
 
-    .name {
+.name {
     margin: 0 5px 0 0;
     padding: 0;
     font-size: 1.3em;
-    }
+}
 
-    .photo_check {
+.photo__check {
     height: 15px;
     margin: 0 5px 0 0;
     background-color: aliceblue;
     border-radius: 50%;
-    }
+}
 
-    .link_nickname {
+.link__nickname {
     text-decoration: none;
     color: rgb(120, 121, 122);
     margin: 0 5px 0 0;
     font-weight: 500;
-    }
+}
 
-    .date{
+.date{
     margin: 0 0 0 5px;
     color: rgb(120, 121, 122);
     font-weight: 500;
-    }
+}
 
-    .content {
+.content {
     width: 400px;
     display: flex;
     flex-direction: column;
     height: 250px;
     overflow: hidden;
     border-radius: 0 0 20px 20px;
-    }
+}
 
-    .content_message{
+.content__message{
     margin: 0;
     padding: 0;
     font-size: 1.1em;
     font-weight: 400;
     padding-bottom: 5px;
-    }
+}
 
-    .content_photo{
+.content__photo{
     border-radius: 20px;
     width: 400px;
-    }
+}
 
-    .content_photo:hover {
+.content__photo:hover {
     opacity: 0.6;
-    }
+}
 
-    .activity {
+.activity {
     display: flex;
     margin: 10px 20px 0 0;
-    }
+}
 
-    .activity_items{
+.activity__items{
     display: flex;
-    margin-right: 60px;
+    margin: 0  25px;
     align-items: center;
-    }
+}
 
-    p {
+p {
     margin: 0 5px;
     padding: 0;
     font-size: 1em;
-    }
+}
 
-    .activity_photo {
+.activity__photo {
     filter: invert(1);
     width: 17px;
     height: 17px;
-    }
+}

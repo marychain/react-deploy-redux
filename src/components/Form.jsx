@@ -1,81 +1,114 @@
-import React from 'react';
-import { useDispatch } from "react-redux";
-import addPost from '../store'
+import { addPost }  from '../store'
 import { Field, reduxForm } from 'redux-form';
-const authors = [ 'Doctor House', 'Lisa Cuddy', 'James Wilson'];
-const Form = props => {
+import React, { useState } from 'react';
+import { useDispatch } from "react-redux";
+import photoDrHouse from './assets/img/drhouse.jpg';
+import photoJWilson from './assets/img/wilson.jpg';
+import photoLCuddy from './assets/img/cuddy.jpg';
+import './assets/css/form.css'
+
+let Form = props => {
+
     const dispatch = useDispatch();
+
+    const [postData, setPostData] = useState({
+        id: 234236,
+        author: '',
+        photoAuthor: photoDrHouse,
+        nickname: 'nick_name',
+        text: '',
+        contentPhoto: '',
+        time: '23 april',
+        comment: 674,
+        like: 8964,
+        retvit: 367
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(addPost(postData))
-    }
+        postData.id = postData.id + 1;
+    };
 
-    const postData = {
-        id: 234236,
-        author: 'Doctor House',
-        //photo:  photoDrHouse,
-        //photoCheck: photoCheck,
-        nickname: 'best_doctor',
-        text: '',
-        contentPhoto: '',
-        time: '09 april',
-        //photoComment: photoComment,
-        //photoLike: photoLike,
-        //photoRepost: photoRepost,
-        //photoShare: photoShare,
-        comment: 568,
-        like: 67,
-        retvit: 23
+    const handleChangeInputs = (e) => {
+        setPostData({
+            ...postData,
+            [e.target.name]: e.target.value,
+        })
+    };
+
+    const handleChangeAuthorData = (e) => {
+        if(e.target.value ==='James Wilson'){
+            setPostData({
+                ...postData,
+                author: e.target.value,
+                photoAuthor: photoJWilson,
+            })   
+        } else if(e.target.value === 'Lisa Cuddy') {
+            setPostData({
+                ...postData,
+                author: e.target.value,
+                photoAuthor: photoLCuddy
+            })
+        } else if (e.target.value === 'Doctor House'){
+            setPostData({
+                ...postData,
+                author: e.target.value,
+                photoAuthor: photoDrHouse
+            })
+        }
     }
     
     return (
         <div>
-            <form className='public' onSubmit={handleSubmit}>
-                <div className='public__items'>
-                    <div>
-                        <label>Текст публікації </label>
-                        <div>
-                            <Field
-                                name="text"
-                                component="input"
-                                type="text"
-                                placeholder="Input text*"
-                                value={postData.text}
-                            />
+            <form className='form' onSubmit={handleSubmit}>
+                    <h1 className='form__head'>Enter public data</h1>
+                    <div className='form__items'>
+                        <div className='items__fields'>
+                            <div>
+                                <Field
+                                    className='items__field'
+                                    name="text"
+                                    component="input"
+                                    type="text"
+                                    placeholder="Input text*"
+                                    value={postData.text}
+                                    onChange={handleChangeInputs}
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className='public__select'>
-                        <label>Зображення</label>
-                        <div>
-                            <Field
-                                name="text"
-                                component="input"
-                                type="text"
-                                placeholder="link*"
-                                value={postData.contentPhoto}
-                            />
+                        <div className='items__fields'>
+                            <div>
+                                <Field
+                                    className='items__field'
+                                    name="contentPhoto"
+                                    component="input"
+                                    type="text"
+                                    placeholder="link img*"
+                                    value={postData.contentPhoto}
+                                    onChange={handleChangeInputs}
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className='public__select'>
-                        <label>Вибір автора</label>
-                        <div>
-                            <Field name="" component="select">
-                                <option value="">Select autor</option>
-                                {authors.map(author => (
-                                <option value={postData.author} key={author}>
-                                    {author}
-                                </option>
-                                ))}
-                            </Field>
+                        <div className='items__fields'>
+                            <label className='items__field__label'>Author select</label>
+                            <div>
+                                <Field className='items__field' name="author" component="select" onChange={handleChangeAuthorData} value={postData.author}>
+                                    <option value='Doctor House' >Doctor House</option>
+                                    <option value='Lisa Cuddy'>Lisa Cuddy</option>
+                                    <option value='James Wilson'>James Wilson</option>
+                                </Field>
+                            </div>
                         </div>
-                    </div>
-                </div>                  
-                <button type="submit" className='form__btn'>Add</button>
+                    </div>                  
+                    <button type="submit" className='form__btn'>Add</button>
             </form>
         </div>
     );
 };
-export default reduxForm({
-    form: 'form', 
-})(Form);
+
+Form = reduxForm({
+    form: 'contact'
+})(Form)
+
+export default Form
